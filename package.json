@@ -1,0 +1,18 @@
+{
+  "name": "addq-slackbot",
+  "version": "1.0.0",
+  "description": "Simple slackbot",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Emil Sandberg",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^8.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "slackbots": "^1.2.0"
+  }
+}
