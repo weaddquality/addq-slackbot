@@ -42,7 +42,10 @@ function handleMessage(message) {
         buildWorld()
     } else if(message.includes(' how do we do it?')) {
         howDoWe()
-    }        
+    }
+    else if(message.includes(' hej')) {
+        testHello()
+    }
 }
 
 function inspireMe() {
@@ -127,6 +130,30 @@ function howDoWe() {
     bot.postMessageToChannel(
         'teknik',
         'We Question Everything',
+        params
+    );
+}
+
+function testHello() {
+    const params = {
+        icon_emoji: ':q:'
+    }
+
+    function randomHello(items) {
+        return items[Math.floor(Math.random()*items.length)]; 
+    }
+
+    let helloItems = [
+        'Hej hej!',
+        'Tjena!',
+        'Tja!',
+        'Hallå där!',
+        'Hello'
+    ];
+
+    bot.postMessageToChannel(
+        'teknik',
+        randomHello(helloItems),
         params
     );
 }
